@@ -10,6 +10,25 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+#main-section {
+  margin: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-section {
+  margin: 0 1.5rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
