@@ -13,10 +13,21 @@
 
 body {
   font-family: "Inter", sans-serif;
+  position: relative;
 }
 
 #main-section {
   margin: 3rem;
+}
+
+body::before {
+  content: "";
+  background: url(images/pattern-curve.svg) no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 30rem;
 }
 
 .card {
@@ -28,6 +39,17 @@ body {
 
 .text-section {
   margin: 0 1.5rem;
+}
+
+.text-section::before {
+  content: "";
+  background: url(images/pattern-quotes.svg) no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 5rem;
+  left: 10rem;
 }
 
 .description {
