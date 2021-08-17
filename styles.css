@@ -37,6 +37,22 @@ body::before {
   justify-content: center;
 }
 
+.user-img {
+  position: relative;
+  left: -7rem;
+  z-index: -1;
+}
+
+.card::before {
+  content: "";
+  background: url(images/pattern-bg.svg) no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+}
+
 .text-section {
   margin: 0 1.5rem;
 }
