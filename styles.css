@@ -14,10 +14,7 @@
 body {
   font-family: "Inter", sans-serif;
   position: relative;
-}
-
-#main-section {
-  margin: 3rem;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -28,6 +25,21 @@ body::before {
   z-index: 1;
   position: absolute;
   top: 30rem;
+}
+
+body::after {
+  content: "";
+  background: url(images/pattern-bg.svg) no-repeat;
+  height: 130%;
+  width: 100%;
+  z-index: -2;
+  position: absolute;
+  top: -60px;
+  left: 36rem;
+}
+
+#main-section {
+  margin: 3rem;
 }
 
 .card {
@@ -41,17 +53,6 @@ body::before {
   position: relative;
   left: -7rem;
   z-index: -1;
-}
-
-.card::before {
-  content: "";
-  background: url(images/pattern-bg.svg) no-repeat;
-  height: 130%;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  top: -60px;
-  left: 36rem;
 }
 
 .text-section {
