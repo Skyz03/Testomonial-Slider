@@ -55,6 +55,23 @@ body::after {
   z-index: -1;
 }
 
+.arrows {
+  position: relative;
+  left: -4rem;
+  width: 18%;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 1px 10px 60px 5px gray;
+  padding: 20px 1rem;
+  top: -2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrow {
+}
+
 .text-section {
   margin: 0 1.5rem;
 }
