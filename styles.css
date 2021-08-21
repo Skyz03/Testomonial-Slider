@@ -17,6 +17,7 @@ body {
   overflow-x: hidden;
 }
 
+/* The bottom Curve */
 body::before {
   content: "";
   background: url(images/pattern-curve.svg) no-repeat;
@@ -27,6 +28,7 @@ body::before {
   top: 30rem;
 }
 
+/* The Purple Curve  */
 body::after {
   content: "";
   background: url(images/pattern-bg.svg) no-repeat;
@@ -38,6 +40,7 @@ body::after {
   left: 36rem;
 }
 
+/* The Main Box */
 #main-section {
   margin: 3rem;
 }
@@ -67,9 +70,6 @@ body::after {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.arrow {
 }
 
 .text-section {
