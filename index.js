@@ -1,4 +1,4 @@
-let sliderCard = document.querySelectorAll(".card");
+let sliderCard = document.querySelectorAll("#card");
 let arrowLeft = document.querySelector('#arrow-left');
 let arrowRight = document.querySelector('#arrow-right');
 current = 0;
@@ -28,22 +28,17 @@ function slideRight() {
 
 // Left arrow click
 arrowLeft.addEventListener('click', function () {
-
-    alert("got clicked")
-    // if (current === 0) {
-    //     current = sliderCard.length;
-    // }
-    // slideLeft();
+    if (current === 0) {
+        current = sliderCard.length;
+    }
+    slideLeft();
 });
 
 arrowRight.addEventListener("click", function () {
-
-    console.log("got Clicke")
-
-    // if (current === sliderCard.length - 1) {
-    //     current = -1;
-    // }
-    // slideRight();
+    if (current === sliderCard.length - 1) {
+        current = -1;
+    }
+    slideRight();
 });
 
 initialSlider();

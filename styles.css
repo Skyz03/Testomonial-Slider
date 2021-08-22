@@ -45,7 +45,7 @@ body::after {
   margin: 3rem;
 }
 
-.card {
+#card {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -71,6 +71,31 @@ body::after {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+#arrow-left {
+  content: "";
+  background: url(images/icon-prev.svg) no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 11.3px;
+}
+
+#arrow-right {
+  content: "";
+  background: url(images/icon-next.svg) no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 11.3px;
+  left: 6rem;
 }
 
 .text-section {
