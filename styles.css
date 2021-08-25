@@ -24,7 +24,7 @@ body {
   background-size: 80%, 100%;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   text-align: center;
   position: relative;
 }
@@ -253,3 +253,79 @@ body {
     top: -38rem;
   }
 } ; */
+
+@media (min-width: 768px) {
+  p {
+    font-size: 2rem;
+  }
+
+  .testimonial {
+    line-height: 3rem;
+    margin: 3rem 0 2rem 0;
+  }
+
+  .user-name,
+  .user-position {
+    font-size: 1rem;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 924px) {
+  p {
+    font-size: 2rem;
+  }
+
+  #carousel-container {
+    background-size: auto 100%, 40%;
+    background-position: top right, bottom left; /*This is a new lesson learned */
+  }
+
+  .testimonials-card {
+    position: relative;
+    padding: 0;
+  }
+
+  /* This is for the profile image */
+  .dp {
+    height: 75vh;
+    width: auto;
+    position: absolute;
+    right: 5%;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .info-wrapper {
+    position: absolute;
+    text-align: left;
+    width: 50%;
+    left: 5%;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .testimonial {
+    margin: 0 0 2rem 0;
+  }
+
+  #carausel-button-wrapper {
+    top: 87.5vh;
+    right: 75vh;
+    z-index: 4;
+    transform: translate(+50%, -50%);
+    width: 96px;
+  }
+}
+
+@media (min-width: 1224px) {
+  .dp {
+    right: 10%;
+  }
+
+  .info-wrapper {
+    left: 10%;
+  }
+}
