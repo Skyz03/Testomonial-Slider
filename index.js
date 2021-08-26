@@ -53,11 +53,10 @@ function init() {
 function prepareButtons() {
     document.getElementById("left-btn").addEventListener('click', () => {
         validate(0);
-
     })
+
     document.getElementById("right-btn").addEventListener('click', () => {
         validate(1);
-
     })
 
 }
