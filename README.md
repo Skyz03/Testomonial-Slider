@@ -18,7 +18,7 @@ This is a solution to the [Coding bootcamp testimonials slider challenge on Fron
 
 
 ## Overview
-This was one of the unique new challenge I completed recently via using JS for the funtionality of the site.
+This was one of the unique new challenge I completed recently via using JS for the funtionality of the site. Likely the use of JS function.
 
 
 ### The challenge
@@ -29,7 +29,8 @@ Users should be able to:
 - Navigate the slider using either their mouse/trackpad or keyboard
 
 ### Screenshot
-![Screenshot 2021-08-22 at 19-41-01 Frontend Mentor Coding Bootcamp Testimonials Slider](https://user-images.githubusercontent.com/42742924/130357840-60fe9c63-c131-4f69-a243-223e89126818.png)
+![image](https://user-images.githubusercontent.com/42742924/130981007-2955ddfa-9b31-4086-9d46-7d63eb792f1c.png)
+![image](https://user-images.githubusercontent.com/42742924/130981118-cc8b518a-46ce-4d93-bf61-a17470f9063b.png)
 
 
 ### Links
@@ -44,6 +45,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Mobile-first Workflow
 
 ### What I learned
 
@@ -52,31 +54,57 @@ I learned a lot about JS and its application for adding event listners. Mostly a
 To see how you can add code snippets, see below:
 
 ```html
-  <div class="arrows">
-      <div id="arrow-left" class="arrow" alt=""></div>
-      <div id="arrow-right" class="arrow" alt=""></div>
-    </div>
+   <button id="left-btn" class="carousel-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="18">
+            <path fill="none" stroke="#8585AC" stroke-width="3" d="M11 1L3 9l8 8" />
+          </svg>
+   </button>
 ```
 ```css
-#arrow-left {
-  content: "";
-  background: url(images/icon-prev.svg) no-repeat;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
+#carousel-container {
+  background-image: url("images/pattern-bg.svg"),
+    url("images/pattern-curve.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: 80%, 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  text-align: center;
+  position: relative;
+}
+
+#carausel-button-wrapper {
   position: absolute;
-  top: 11.3px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  top: calc((100vw - 4.4rem) * 0.75 + 2rem);
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 9;
 }
 ```
 ```js
-arrowRight.addEventListener("click", function () {
-    if (current === sliderCard.length - 1) {
-        current = -1;
-    }
-    slideRight();
-});
+function switchCarousel() {
+    const card = document.getElementsByClassName('testimonials-card')
+    console.log(card)
 
-initialSlider();
+    if (carouselState == 0) {
+        card[0].style.left = "100vw";
+        card[1].style.left = "0";
+        carouselState = 1;
+        return
+    }
+
+    if (carouselState == 1) {
+        card[0].style.left = "0"
+        card[1].style.left = "-100vw"
+        carouselState = 0;
+    }
+}
 }
 ```
 
@@ -84,7 +112,7 @@ initialSlider();
 
 ### Continued development
 
-Can Add Keyboard listners plus many more such as imporoved CSS Layout.
+Can Add Keyboard listners
 
 
 ### Useful resources
